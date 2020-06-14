@@ -1,4 +1,5 @@
 class Article < ApplicationRecord
+    has_many :articles
     validates :title, presence: true, length: { minimum: 6, maximimum: 100}
     validates :description, presence: true, length: { minimum: 10, maximimum: 300}
 end
